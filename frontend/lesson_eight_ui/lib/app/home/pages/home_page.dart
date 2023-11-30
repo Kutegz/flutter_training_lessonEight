@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lesson_eight_ui/app/users/data/users_notifier.dart';
-import 'package:lesson_eight_ui/app/users/pages/users_page.dart';
 import 'package:provider/provider.dart';
+import 'package:lesson_eight_ui/app/users/pages/users_page.dart';
+import 'package:lesson_eight_ui/app/users/data/users_provider.dart';
 
 final class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +15,7 @@ final class HomePage extends StatelessWidget {
       body: Center(
           child: ElevatedButton(
         onPressed: () {
-          context.read<UsersNotifier>().getUsers();
+          context.read<UsersProvider>().setUsers();
 
           Navigator.of(context).push(
             MaterialPageRoute(

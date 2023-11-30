@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:lesson_eight_ui/app/home/pages/home_page.dart';
-import 'package:lesson_eight_ui/app/users/data/users_notifier.dart';
+import 'package:lesson_eight_ui/app/users/data/users_provider.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-      create: (context) => UsersNotifier(
+      create: (context) => UsersProvider(
             initialState: [],
           ),
       child: const App()));

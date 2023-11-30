@@ -4,7 +4,7 @@ final class User {
   final String lastname;
   final int loginLevel;
   final bool isActive;
-  // final List<String> roles;
+  final List<String> roles;
 
   const User({
     required this.id,
@@ -12,7 +12,7 @@ final class User {
     required this.lastname,
     required this.loginLevel,
     required this.isActive,
-    // required this.roles,
+    required this.roles,
   });
 
   factory User.fromJson(Map<String, dynamic> json) => User(
@@ -21,6 +21,6 @@ final class User {
         lastname: json['lastname'] ?? '',
         loginLevel: json['loginLevel'] ?? 0,
         isActive: json['isActive'] ?? false,
-        // roles: List<String>.from(json['roles'] ?? []),
+        roles: List<String>.from(json['roles'] ?? []),
       );
 }
